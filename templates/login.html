@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="fourth-screen">
+      <h1 class="title-log-reg">Вход</h1>
+      <div class="register-container">
+        <form class="form-connect" id="loginForm" method="POST" action="{{ url_for('login') }}">
+          <div class="form-group">
+            <input type="text" name="username" id="username" placeholder="Имя пользователя" required>
+          </div>
+          <div class="form-group">
+            <input type="password" name="password" id="password" placeholder="Пароль" required>
+          </div>
+          <button type="submit" class="button">Войти</button>
+        </form>
+      </div>
+      <div class="already-have-account">
+        <p>Нет аккаунта? <a href="{{ url_for('register') }}" class="login-link">Зарегистрироваться</a></p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

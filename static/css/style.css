@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "Inter";
   font-style: normal;
@@ -93,6 +94,15 @@ header {
   font-family: Inter;
 }
 
+.hotels {
+  color: white;
+  letter-spacing: -4%;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Inter;
+}
+
 .login-button {
   padding: 10px 36px;
   font-weight: 500;
@@ -117,14 +127,10 @@ header {
 }
 
 .first-screen {
-  background-image: url('img/umbrella-pool-chair.png');
-  /* Путь к изображению */
+  background-image: url('/static/img/umbrella-pool-chair.png');
   background-size: cover;
-  /* Заполнение всего контейнера */
   background-position: center;
-  /* Центрирование изображения */
   height: calc(100vh - 100px);
-  /* Высота экрана минус высота хедера */
 }
 
 .first-screen-menu {
@@ -291,7 +297,7 @@ input[type="date"] {
 }
 
 .hotels-item-img1 {
-  background-image: url('img/image.png');
+  background-image: url('/static/img/image.png');
   height: 195px;
   width: 365px;
   background-size: cover;
@@ -299,7 +305,7 @@ input[type="date"] {
 }
 
 .hotels-item-img2 {
-  background-image: url('img/image-1.png');
+  background-image: url('/static/img/image-3.png');
   height: 195px;
   width: 365px;
   background-size: cover;
@@ -307,7 +313,7 @@ input[type="date"] {
 }
 
 .hotels-item-img3 {
-  background-image: url('img/image-2.png');
+  background-image: url('/static/img/image-2.png');
   height: 195px;
   width: 365px;
   background-size: cover;
@@ -315,7 +321,7 @@ input[type="date"] {
 }
 
 .hotels-item-img4 {
-  background-image: url('img/image-3.png');
+  background-image: url('/static/img/image-1.png');
   height: 195px;
   width: 365px;
   background-size: cover;
@@ -323,7 +329,7 @@ input[type="date"] {
 }
 
 .hotels-item-img5 {
-  background-image: url('img/image-4.png');
+  background-image: url('/static/img/image-4.png');
   height: 195px;
   width: 365px;
   background-size: cover;
@@ -331,7 +337,7 @@ input[type="date"] {
 }
 
 .hotels-item-img6 {
-  background-image: url('img/image-5.png');
+  background-image: url('/static/img/image-5.png');
   height: 195px;
   width: 365px;
   background-size: cover;
@@ -558,6 +564,8 @@ input[type="date"] {
 
 .profile-actions {
   margin-top: 30px;
+  display: flex;
+    justify-content: center;
 }
 
 .profil-button {
@@ -624,3 +632,297 @@ input[type="date"] {
 li::marker {
   list-style: none;
 }
+
+.first-hotels {
+  height: 1080px;
+}
+
+/* Общие стили */
+
+.header_right_menu a {
+  font-size: 16px;
+  margin: 0 10px;
+  color: white;
+  transition: color 0.3s;
+}
+
+.header_right_menu a:hover {
+  color: #FFD700;
+}
+
+.login-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid white;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.login-button:hover {
+  background-color: white;
+  color: #0E41D2;
+}
+
+/* Контент */
+.first-hotels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.add-hotel, .hotel-list {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.add-hotel h2, .hotel-list h2 {
+  font-size: 24px;
+  width: 660px;
+  color: #0E41D2;
+}
+
+.add-hotel form {
+  width: 660px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-hotel input{
+  width: 660px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+}
+
+.add-hotel textarea {
+  width: 640px;
+  height: 150px; /* Задаем фиксированную высоту */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  resize: none; /* Отключаем возможность изменения размера */
+}
+
+
+.add-hotel button {
+  padding: 10px 20px;
+  width: 660px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #0E41D2;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-hotel button:hover {
+  background-color: #0056b3;
+}
+
+/* Список отелей */
+.hotel-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hotel-list li {
+  margin-bottom: 15px;
+  padding: 15px;
+  background: #F1F4F8;
+  border-radius: 8px;
+  transition: box-shadow 0.3s;
+}
+
+.hotel-list li h3 {
+  margin: 0 0 5px;
+  font-size: 20px;
+  color: #333;
+}
+
+.hotel-list li p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.hotel-list li:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #fff;
+  margin: 10px auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #555;
+}
+
+li p {
+  margin: 5px 0 0;
+  color: #777;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.btn-edit {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #45a049;
+}
+
+.btn-delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #da190b;
+}
+
+/* Общие стили для всего контейнера */
+.wrapper1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  padding: 40px 0;
+}
+
+/* Стили для блока с деталями отеля */
+.hotel-details {
+  max-width: 1000px;
+  width: 100%;
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок отеля */
+.hotel-name {
+  font-family: 'NauryzRedKeds', cursive;
+  font-size: 66px;
+  color: #0E41D2;
+  margin-bottom: 20px;
+}
+
+/* Стили для изображений отеля */
+.hotel-image {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hotel-img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для текстового контента */
+.hotel-info, .hotel-amenities, .hotel-location, .hotel-contact {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #0E41D2;
+  margin-bottom: 15px;
+}
+
+p, ul {
+  font-size: 18px;
+  color: #333;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Стили для контейнера контактов */
+.hotel-contact p {
+  font-size: 18px;
+  color: #333;
+}
+
+.hotel-contact p:first-of-type {
+  margin-top: 10px;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+  .hotel-details {
+    padding: 20px;
+  }
+
+  .hotel-name {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p, ul {
+    font-size: 16px;
+  }
+}
+
